@@ -12,11 +12,14 @@ import 'package:flutter/widgets.dart';
 class $AssetsAnimGen {
   const $AssetsAnimGen();
 
-  /// File path: assets/anim/Frame 6.json
-  String get frame6 => 'assets/anim/Frame 6.json';
+  /// File path: assets/anim/coffee.json
+  String get coffee => 'assets/anim/coffee.json';
+
+  /// File path: assets/anim/loading.json
+  String get loading => 'assets/anim/loading.json';
 
   /// List of all assets
-  List<String> get values => [frame6];
+  List<String> get values => [coffee, loading];
 }
 
 class $AssetsI18nGen {

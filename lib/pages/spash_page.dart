@@ -29,11 +29,14 @@ class SplashPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Lottie.asset(Assets.anim.frame6,
-                    alignment: Alignment.center,
-                    fit: BoxFit.contain,
-                    width: context.widthDevice * .8,
-                    height: context.heightDevice * .5)
+                Lottie.asset(Assets.anim.coffee,
+                    width: 488, fit: BoxFit.fill, alignment: Alignment.center, height: 366),
+                const Spacer(),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 16),
+                  child: Lottie.asset(Assets.anim.loading,
+                      width: 100, height: 100, fit: BoxFit.fill, backgroundLoading: true),
+                )
               ],
             ),
           ),

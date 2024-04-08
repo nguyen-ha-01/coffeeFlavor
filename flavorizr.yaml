@@ -1,0 +1,25 @@
+flavors:
+  production:
+    app:
+      name: "COFFEE ZONE"
+      icon: "assets/images/app_icon.png"
+    android:
+      applicationId: "com.bcb.coffeeflavor"
+    ios:
+      bundleId: "com.bcb.coffeeflavor"
+  development:
+    app:
+      name: "dev COFFEE ZONE"
+      icon: "assets/images/app_icon.png"
+    android:
+      applicationId: "com.bcb.coffeeflavor.dev"
+    ios:
+      bundleId: "com.bcb.coffeeflavor.dev"
+  staging:
+    app:
+      name: "stag COFFEE ZONE"
+      icon: "assets/images/app_icon.png"
+    android:
+      applicationId: "com.bcb.coffeeflavor.stag"
+    ios:
+      bundleId: "com.bcb.coffeeflavor.stag"

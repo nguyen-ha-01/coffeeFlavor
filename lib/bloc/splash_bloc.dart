@@ -11,4 +11,8 @@ class SplashCubit extends Cubit<BaseCubitState<dynamic>> {
     await Future<void>.delayed(const Duration(seconds: 1));
     emit(state.copyWith(status: Status.success));
   }
+
+  Future<bool> checkIsSignIn() async {
+    return true;
+  }
 }

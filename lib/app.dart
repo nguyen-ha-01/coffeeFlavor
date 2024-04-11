@@ -12,7 +12,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: F.title,
-      navigatorObservers: [],
+      navigatorObservers: [GetObserver()],
       getPages: AppRouter().pages,
       locale: SystemConfig.defaultLanguage,
       themeMode: ThemeMode.light,

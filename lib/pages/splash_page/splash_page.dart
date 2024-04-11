@@ -19,7 +19,8 @@ class SplashPage extends StatelessWidget {
         body: BlocListener<SplashCubit, BaseCubitState>(
           listener: (ctx, state) {
             if (state.status == Status.success) {
-              Get.offAllNamed(Routes.homeNamedPage);
+              //text to move to login
+              Get.offAllNamed(Routes.loginNamedPage);
             }
           },
           child: SizedBox(

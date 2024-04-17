@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class AppColor {
+  static Color shadow = const Color.fromARGB((255 ~/ 4), 0, 0, 0);
+  static Color cardBackground = const Color.fromARGB(255, 255, 255, 255);
   static const MaterialColor primaryGreen = MaterialColor(
     0xFF669835,
     <int, Color>{
@@ -113,6 +115,9 @@ class AppColor {
   static const Color whiteLight = Color(0xffd9d9d9);
   static const Color whiteLight2 = Color(0xffE2E2E2);
   static const Color whiteLight3 = Color(0xffC3C7C7);
+
+  static const Color highLight = Color(0xffFF5A36);
+  static const Color lowLight = Color(0xff808080);
 
   /// *** Recommended Usage:
   /// Title texts, captions, input fields and everywhere else where black is required: AppColor.black

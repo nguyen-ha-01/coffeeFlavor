@@ -1,0 +1,32 @@
+{
+  "login": {
+    "h1": "+84",
+    "h2": "Enter phone number",
+    "b1": "Sign in",
+    "b2": "Haven't an account"
+  },
+  "register": {
+    "l1": "Register",
+    "l2": "Add your phone number, we'll send you a verification code",
+    "h1": "+84",
+    "h2": "Enter phone number",
+    "b1": "Next",
+    "l3": "Enter your verification code",
+    "b2": "Cancel",
+    "b3": "Next",
+    "l4": "Create your account name",
+    "h3": "Enter your name",
+    "b4": "Finish"
+  },
+  "home": {
+    "categories": {
+      "1": "coffee"
+    }
+  },
+  "nav": {
+    "l1": "Home",
+    "l2": "Message",
+    "l3": "Notification",
+    "l4": "Profile"
+  }
+}

@@ -12,6 +12,7 @@ class SystemConfig {
     'Content-Type': 'application/json',
     'Accept': 'application/json',
   };
+  static const Duration aniDuration = Duration(milliseconds: 250);
 }
 
 class URL {

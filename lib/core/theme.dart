@@ -1,9 +1,23 @@
 import 'package:coffeeflavor/core/app_color.dart';
+import 'package:coffeeflavor/core/app_text_style.dart';
 import 'package:coffeeflavor/gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
+import 'package:pinput/pinput.dart';
 
 class AppTheme {
   AppTheme._();
+
+  static ButtonStyle noSplashBtn = const ButtonStyle(
+      splashFactory: NoSplash.splashFactory, overlayColor: MaterialStatePropertyAll(Colors.transparent));
+  static PinTheme defaultPinTheme = PinTheme(
+    width: 43,
+    height: 56,
+    textStyle: AppTextStyle.boldLb2,
+    decoration: BoxDecoration(
+        //border: Border.all(color: Color.fromRGBO(234, 239, 243, 1)),
+        borderRadius: BorderRadius.circular(6),
+        color: const Color(0xffD9D9D9)),
+  );
 
   static ThemeData lightAppTheme = ThemeData(
     useMaterial3: false,

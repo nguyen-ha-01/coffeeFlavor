@@ -15,7 +15,7 @@ class AppRouter {
         _getPage(name: Routes.splashNamedPage, page: () => const SplashPage()),
         _getPage(name: Routes.homeNamedPage, page: () => const HomePage()),
         _getPage(name: Routes.loginNamedPage, page: () => const LoginPage()),
-        _getPage(name: Routes.signupNamePage, page: () => const SignupPage()),
+        _getPage(name: Routes.signupNamedPage, page: () => const SignupPage()),
         _getPage(name: Routes.messageNamedPage, page: () => const MessagePage()),
         _getPage(name: Routes.notificationNamedPage, page: () => const NotificationPage()),
         _getPage(name: Routes.profileNamedPage, page: () => const ProfilePage()),

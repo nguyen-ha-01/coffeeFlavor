@@ -19,7 +19,7 @@ extension ContextExtension on BuildContext {
 
   Brightness get appBrightness => MediaQuery.of(this).platformBrightness;
 
-  double get textScaleFactor => MediaQuery.of(this).textScaleFactor;
+  // double get textScaleFactor => MediaQuery.of(this).textScaleFactor;
 }
 
 extension MediaQueryExtension on BuildContext {
@@ -30,4 +30,8 @@ extension MediaQueryExtension on BuildContext {
   double dynamicWidth({required double val}) => widthDevice * val;
 
   double dynamicHeight({required double val}) => heightDevice * val;
+}
+
+extension Strings on String? {
+  String toPrice() => this != null ? 'from ${this.toString()} vnđ' : 'from 29000 vnđ';
 }

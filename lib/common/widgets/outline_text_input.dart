@@ -1,28 +1,46 @@
 import 'package:coffeeflavor/core/app_text_style.dart';
 import 'package:flutter/material.dart';
+import 'package:gradient_borders/input_borders/gradient_outline_input_border.dart';
 
-class TextWidget extends StatelessWidget {
-  const TextWidget({required this.leading, this.hint, super.key, required this.controller});
+class TextInputItem extends StatelessWidget {
+  const TextInputItem(
+      {this.style, this.type, this.action, required this.leading, this.hint, super.key, required this.controller});
 
   final TextEditingController controller;
   final String? hint;
   final Widget? Function() leading;
-
+  final TextInputAction? action;
+  final TextInputType? type;
+  final TextStyle? style;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
       decoration: InputDecoration(
         hintText: hint,
-        hintStyle: AppTextStyle.inputHint,
-        focusedBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Color(0xff35A0EE)), borderRadius: BorderRadius.circular(16)),
-        border: OutlineInputBorder(
-            borderSide: const BorderSide(color: Color(0xff35A0EE)), borderRadius: BorderRadius.circular(16)),
-        disabledBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Color(0xff35A0EE)), borderRadius: BorderRadius.circular(16)),
-        enabledBorder: OutlineInputBorder(
-            borderSide: const BorderSide(color: Color(0xff35A0EE)), borderRadius: BorderRadius.circular(16)),
+        hintStyle: AppTextStyle.hint1,
+        focusedBorder: GradientOutlineInputBorder(
+          gradient: const LinearGradient(
+              colors: [Color(0xff35A0EE), Color(0xff394C62), Color(0xff394C62), Color(0xff394C62)]),
+          borderRadius: BorderRadius.circular(16),
+          width: 1,
+        ),
+        border: GradientOutlineInputBorder(
+          gradient: const LinearGradient(colors: [Color(0xff35A0EE), Color(0xff394C62)]),
+          borderRadius: BorderRadius.circular(16),
+          width: 1,
+        ),
+        disabledBorder: GradientOutlineInputBorder(
+          gradient: const LinearGradient(colors: [Color(0xff35A0EE), Color(0xff394C62)]),
+          borderRadius: BorderRadius.circular(16),
+          width: 1,
+        ),
+        enabledBorder: GradientOutlineInputBorder(
+          gradient: const LinearGradient(
+              colors: [Color(0xff35A0EE), Color(0xff394C62), Color(0xff394C62), Color(0xff394C62)]),
+          borderRadius: BorderRadius.circular(16),
+          width: 1,
+        ),
         prefixIcon: leading() != null
             ? Container(
                 margin: const EdgeInsets.only(right: 8),
@@ -37,6 +55,10 @@ class TextWidget extends StatelessWidget {
             : null,
         floatingLabelBehavior: FloatingLabelBehavior.always,
       ),
+      textInputAction: action ?? TextInputAction.done,
+      keyboardType: type ?? TextInputType.phone,
+      textAlignVertical: TextAlignVertical.center,
+      style: style ?? AppTextStyle.textInput1,
     );
   }
 }
